@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .pulse {
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+  <h1 class="text-3xl font-bold mb-4 text-gray-700">Tic-Tac-Toe </h1>
+
+  <p id="turnIndicator" class="mb-4 text-lg font-semibold text-gray-600">Current Turn: X</p>
+
+  <div class="mb-4">
+    <label class="mr-2 font-semibold">Mode:</label>
+    <select id="modeSelect" class="border p-2 rounded">
+      <option value="2p">2 Players</option>
+      <option value="1p">Play vs AI</option>
+    </select>
+  </div>
+
+  <div id="board" class="grid grid-cols-3 gap-2 mb-6 max-w-sm w-full">
+    <div class="cell w-24 h-24 bg-gray-200 flex items-center justify-center text-5xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-300" data-index="0"></div>
+    <div class="cell w-24 h-24 bg-gray-200 flex items-center justify-center text-5xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-300" data-index="1"></div>
+    <div class="cell w-24 h-24 bg-gray-200 flex items-center justify-center text-5xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-300" data-index="2"></div>
+    <div class="cell w-24 h-24 bg-gray-200 flex items-center justify-center text-5xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-300" data-index="3"></div>
+    <div class="cell w-24 h-24 bg-gray-200 flex items-center justify-center text-5xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-300" data-index="4"></div>
+    <div class="cell w-24 h-24 bg-gray-200 flex items-center justify-center text-5xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-300" data-index="5"></div>
+    <div class="cell w-24 h-24 bg-gray-200 flex items-center justify-center text-5xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-300" data-index="6"></div>
+    <div class="cell w-24 h-24 bg-gray-200 flex items-center justify-center text-5xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-300" data-index="7"></div>
+    <div class="cell w-24 h-24 bg-gray-200 flex items-center justify-center text-5xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-300" data-index="8"></div>
+  </div>
+
+  <p id="result" class="text-lg font-semibold mb-4 text-gray-700"></p>
+
+  <button id="resetBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full max-w-sm">
+    Reset Game
+  </button>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
